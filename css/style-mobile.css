@@ -67,11 +67,11 @@ audio {
 
 #Rückmeldung h1 u {
     background: none;
-    font-size: 20px;
+    font-size: 60%;
 }
 
 #Rückmeldung p {
-    font-size: 10px;
+    font-size: 50%;
 }
 
 #Rückmeldung h1,
