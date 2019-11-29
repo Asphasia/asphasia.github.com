@@ -125,16 +125,3 @@ select {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-
-/*@media only screen and (max-width: 525px) {
-    * {
-        display: none;
-    }
-}
-
-@media only screen and (max-height: 625px) {
-    * {
-        display: none;
-    }
-}
