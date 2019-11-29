@@ -1,0 +1,140 @@
+* {
+    background-image: linear-gradient(290deg, #55df98, #455b97);
+    color: black;
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#Main {
+    background: rgb(236, 239, 241);
+    padding: 20px;
+    height: 600px;
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    border: 3px rgba(255, 255, 255, .5) solid;
+}
+
+#Bild {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    border: 3px rgba(255, 255, 255, .5) solid;
+    background: none;
+}
+
+#Name {
+    display: none;
+    position: absolute;
+    top: 71.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+}
+
+audio {
+    border: 3px rgba(255, 255, 255) solid;
+    border-radius: 30px;
+    position: absolute;
+    top: 92.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+}
+
+#Score {
+    float: left;
+    margin: 0 0 30px;
+    padding: 0;
+    text-align: center;
+    background: none;
+}
+
+#Highscore {
+    float: right;
+    margin: 0 0 30px;
+    padding: 0;
+    text-align: center;
+    background: none;
+}
+
+#Rückmeldung {
+    display: none;
+    background: rgb(236, 239, 241);
+    padding: 20px;
+    height: 600px;
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    border: 3px rgba(255, 255, 255, .5) solid;
+    text-align: center;
+    padding: 25px;
+}
+
+#Rückmeldung h1 u {
+    background: none;
+    font-size: 60px;
+}
+
+#Rückmeldung h1,
+p,
+button {
+    background: none;
+}
+
+#Rückmeldung button {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(290deg, #55df98, #455b97);
+    border: none;
+    border: 2px black solid;
+    border-radius: 5px;
+    width: 90%;
+}
+
+svg {
+    display: none;
+    background: none;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+select {
+    display: block;
+    background: rgb(236, 239, 241);
+    position: absolute;
+    margin-bottom: 5%;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 525px) {
+    #Main {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-height: 525px) {
+    select {
+        bottom: 10%;
+    }
+}
