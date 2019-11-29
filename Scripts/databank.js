@@ -13,7 +13,7 @@ var highscore = 0;
 
 window.onload = function onload() {
     //document.getElementById("selecter").val = "option1"
-    TiereX();
+    ZeigeRandomBild();
 }
 
 function Hide() {
@@ -24,22 +24,22 @@ function Tipps() {
     if (selector.options[selector.selectedIndex].value == "Übung") {
         //Wenn man Abfrage drückt
         Name.style.display = "none"
-        Bild.onclick = Raten;
+        Bild.onclick = AbfrageBild;
     } else {
         //Wenn man übung drückt
         Name.style.display = "block"
-        Bild.onclick = TiereX;
+        Bild.onclick = ZeigeRandomBild;
     }
 }
 
 
 /*else {
-    Bild.onclick = TiereX;
+    Bild.onclick = ZeigeRandomBild;
 }
 
 }*/
 
-function Raten() {
+function AbfrageBild() {
     var Antwort = prompt("Geben sie ihre Schäztung ein!")
     if (Antwort == Tier123[0]) {
         //Bild.style.border = "10px green solid";
@@ -47,12 +47,12 @@ function Raten() {
         Score.innerHTML = "Score: " + score;
         Bild.onclick = "";
         document.getElementById("Right").style.display = "block";
-        setTimeout(ReloadRight, 1000)
+        setTimeout(ReloadAntwortRichtig, 1000)
 
-        function ReloadRight() {
+        function ReloadAntwortRichtig() {
             document.getElementById("Right").style.display = "none";
-            Bild.onclick = Raten;
-            TiereX();
+            Bild.onclick = AbfrageBild;
+            ZeigeRandomBild();
             Bild.style.border = "5px rgba(244, 244, 244, .5) solid";
             Main.style.background = "rgba(255, 255, 255, .8)";
         }
@@ -71,11 +71,11 @@ function Raten() {
         Highscore.innerHTML = "Highscore: " + highscore;
 
         Bild.onclick = "";
-        setTimeout(ReloadWrong, 1000)
+        setTimeout(ReloadAntwortFalsch, 1000)
 
-        function ReloadWrong() {
-            Bild.onclick = Raten;
-            TiereX();
+        function ReloadAntwortFalsch() {
+            Bild.onclick = AbfrageBild;
+            ZeigeRandomBild();
             Bild.style.border = "5px rgba(244, 244, 244, .5) solid";
             Main.style.background = "rgba(255, 255, 255, .8)";
         }
@@ -122,7 +122,7 @@ var Tiere = [
 
 var Tier123 = {};
 
-function TiereX() {
+function ZeigeRandomBild() {
     var random = window.Tiere[Math.floor(Math.random() * window.Tiere.length)];
     var Tier = [random, "../Audio/" + random + ".mp3", "../Bilder/" + random + ".svg"];
     Tier123 = Tier;
