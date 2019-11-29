@@ -50,22 +50,6 @@ audio {
     background: none;
 }
 
-#Score {
-    float: left;
-    margin: 0 0 30px;
-    padding: 0;
-    text-align: center;
-    background: none;
-}
-
-#Highscore {
-    float: right;
-    margin: 0 0 30px;
-    padding: 0;
-    text-align: center;
-    background: none;
-}
-
 #Rückmeldung {
     display: none;
     background: rgb(236, 239, 241);
@@ -121,7 +105,7 @@ select {
     background: rgb(236, 239, 241);
     position: absolute;
     margin-bottom: 5%;
-    top: -10%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
 }

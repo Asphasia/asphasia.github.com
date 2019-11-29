@@ -31,6 +31,22 @@
     background: none;
 }
 
+#Score {
+    float: left;
+    margin: 0 0 30px;
+    padding: 0;
+    text-align: center;
+    background: none;
+}
+
+#Highscore {
+    float: right;
+    margin: 0 0 30px;
+    padding: 0;
+    text-align: center;
+    background: none;
+}
+
 #Name {
     display: none;
     position: absolute;
@@ -47,22 +63,6 @@ audio {
     top: 92.5%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: none;
-}
-
-#Score {
-    float: left;
-    margin: 0 0 30px;
-    padding: 0;
-    text-align: center;
-    background: none;
-}
-
-#Highscore {
-    float: right;
-    margin: 0 0 30px;
-    padding: 0;
-    text-align: center;
     background: none;
 }
 
