@@ -109,16 +109,3 @@ select {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-@media only screen and (max-width: 525px) {
-    #Main {
-        height: 100%;
-        width: 100%;
-    }
-}
-
-@media only screen and (max-height: 525px) {
-    select {
-        bottom: 10%;
-    }
-}
