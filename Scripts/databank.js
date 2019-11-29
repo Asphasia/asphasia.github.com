@@ -31,6 +31,8 @@ function Tipps() {
         Bild.onclick = TiereX;
     }
 }
+
+
 /*else {
     Bild.onclick = TiereX;
 }
@@ -84,16 +86,16 @@ function Raten() {
 
 var Tiere = [
     "Affe",
+    "Biene",
+    "Elefant",
+    "Frosch",
+    "Hahn",
+    "Hase",
+    "Kuh",
     "Pferd",
-    "Wildschwein",
-    "Eisbär",
-    "Giraffe",
-    "Känguru",
-    "Katze",
+    "Schwein",
+    "Tiger",
     /*"",
-    "",
-    "",
-    "",
     "",
     "",
     "",
@@ -122,7 +124,7 @@ var Tier123 = {};
 
 function TiereX() {
     var random = window.Tiere[Math.floor(Math.random() * window.Tiere.length)];
-    var Tier = [random, "../Audio/" + random + ".mp3", "../Bilder/" + random + ".jpg"];
+    var Tier = [random, "../Audio/" + random + ".mp3", "../Bilder/" + random + ".svg"];
     Tier123 = Tier;
     Name.innerHTML = Tier[0];
     Audio.src = Tier[1];
