@@ -15,7 +15,7 @@
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
-    border-radius: 10px;
+    /*border-radius: 10px;*/
     border: 3px rgba(255, 255, 255, .5) solid;
 }
 
@@ -52,18 +52,16 @@ audio {
 #Rückmeldung {
     display: none;
     background: rgb(236, 239, 241);
-    padding: 20px;
-    height: 600px;
-    width: 500px;
+    height: 100%;
+    width: 100%;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
-    border-radius: 10px;
+    /*border-radius: 10px;*/
     border: 3px rgba(255, 255, 255, .5) solid;
-    text-align: center;
     padding: 25px;
 }
 
