@@ -41,7 +41,7 @@ function Tipps() {
 
 function AbfrageBild() {
     var Antwort = prompt("Geben sie ihre Schäztung ein!")
-    if (Antwort == Tier123[0]) {
+    if (Antwort == RandomItem[0]) {
         //Bild.style.border = "10px green solid";
         score++;
         Score.innerHTML = "Score: " + score;
@@ -61,7 +61,7 @@ function AbfrageBild() {
         //Bild.style.border = "10px red solid";
         document.getElementById("Rückmeldung").style.display = "block";
         document.getElementById("ErgebnisHeader").innerHTML = "<u>Dein Ergebnis ist falsch!</u>";
-        document.getElementById("ErgebnisParagraph").innerHTML = "Schade, dein Ergebnis ist falsch. Das richtige Ergebnis wäre:" + " " + Tier123[0];
+        document.getElementById("ErgebnisParagraph").innerHTML = "Schade, dein Ergebnis ist falsch. Das richtige Ergebnis wäre:" + " " + RandomItem[0];
         if (score > highscore) {
             highscore = score;
         }
@@ -84,49 +84,86 @@ function AbfrageBild() {
     }
 }
 
-var Tiere = [
-    "Affe",
-    "Biene",
-    "Elefant",
-    "Frosch",
-    "Hahn",
-    "Hase",
-    "Kuh",
-    "Pferd",
-    "Schwein",
-    "Tiger",
-    /*"",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""*/
+var Items = [
+    "Geflügel",
+    "Schweinefleisch",
+    "Lammfleisch",
+    "Rindfleisch",
+    "Fisch",
+    "Fritten",
+    "Kroketten",
+    "Ofenkartoffel",
+    "Reis",
+    "Kartoffel",
+    "Gratin",
+    "Nudeln",
+    "Brot",
+    "Bratkartoffeln",
+    "Püree",
+    "Baguette",
+    "Brötchen",
+    "Spiegelei",
+    "Omelett",
+    "Rührei",
+    "Kuchen",
+    "Eis",
+    "Schokolade",
+    "Pudding",
+    "Mousse au Chocolat",
+    "Pfannenkuchen",
+    "Waffeln",
+    "Wurst",
+    "gekochter Schinken",
+    "roher Schinken",
+    "Salami",
+    "Käse",
+    "Marmelade",
+    "Sirup",
+    "Schokoladencreme",
+    "Quark",
+    "Streichkäse",
+    "Ei",
+    "Möhren",
+    "Blumenkohl",
+    "Zucchini",
+    "Gurke",
+    "Salat",
+    "Paprika",
+    "Tomaten",
+    "Mais",
+    "Lauch",
+    "Aubergine",
+    "Kohl",
+    "Spinat",
+    "Erbsen",
+    "Bohnen",
+    "Pilz",
+    "Zwiebel",
+    "Rosenkohl",
+    "Apfel",
+    "Orange",
+    "Mandarine",
+    "Trauben",
+    "Birne",
+    "Banane",
+    "Kirsche",
+    "Erdbeere",
+    "Himbeere",
+    "Blaubeere",
+    "Ananas",
+    "Pflaume",
+    "Pfirsich",
+    "Kiwi",
+    "Mango"
 ]
 
-var Tier123 = {};
+var RandomItem = {};
 
 function ZeigeRandomBild() {
-    var random = window.Tiere[Math.floor(Math.random() * window.Tiere.length)];
-    var Tier = [random, "../Audio/" + random + ".mp3", "../Bilder/" + random + ".svg"];
-    Tier123 = Tier;
-    Name.innerHTML = Tier[0];
-    Audio.src = Tier[1];
-    Bild.src = Tier[2];
+    var random = window.Items[Math.floor(Math.random() * window.Items.length)];
+    var RandomItem_ = [random, "../Audio/Essen/" + random + ".mp3", "../Bilder/Essen/" + random + ".jpg"];
+    RandomItem = RandomItem_;
+    Name.innerHTML = RandomItem[0];
+    Audio.src = RandomItem[1];
+    Bild.src = RandomItem[2];
 }
