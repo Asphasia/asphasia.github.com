@@ -54,7 +54,7 @@ function Tipps() {
             var a1 = document.createElement("a")
             a1.setAttribute("Id", "Zurück")
             document.getElementById("Übung").appendChild(a1)
-            a1.setAttribute("href", "../Seiten/quiz_essen.html")
+            a1.setAttribute("href", "index.html")
             a1.style.display = "block"
             a1.innerHTML = "Zurück"
 
