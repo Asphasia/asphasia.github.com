@@ -32,7 +32,7 @@ function Tipps() {
     if (selector.options[selector.selectedIndex].value == "Übung") {
         //Wenn man übung drückt
         function ÜbungZeigen() {
-            for (var i = 0; i < 70; i++) {
+            for (var i = 0; i < Items.length; i++) {
 
                 Main.style.display = ("none")
                 document.getElementById("Übung").style.display = "inline-block"
@@ -45,7 +45,7 @@ function Tipps() {
                 document.getElementById("einzel" + zahl).appendChild(figcaption1)
                 document.getElementById("einzel" + zahl).textContent = Items[i];
                 var img1 = document.createElement("img")
-                img1.setAttribute("src", "../Bilder/Essen/" + Items[i] + ".jpg")
+                img1.setAttribute("src", "../Bilder/" + Kategorie + "/" + Items[i] + ".jpg")
                 document.getElementById("einzel" + zahl).appendChild(img1)
                 zahl++;
 
