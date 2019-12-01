@@ -121,7 +121,7 @@ select {
     background: rgb(236, 239, 241);
     position: absolute;
     margin-bottom: 5%;
-    top: -10%;
+    top: -5.5%;
     left: 75%;
     transform: translate(-50%, -50%);
 }
@@ -160,7 +160,7 @@ figure img {
 
 #VarSelect {
     position: absolute;
-    top: -10%;
+    top: -5.5%;
     left: 25%;
 }
 
