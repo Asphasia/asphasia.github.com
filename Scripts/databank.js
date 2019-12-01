@@ -206,7 +206,7 @@ var Items_Trinken = [
 var Items_Bad = [
     "Handtuch",
     "Waschlappen",
-    "Geschichtscreme",
+    "Gesichtscreme",
     "Shampoo",
     "Parfüm",
     "Deo",

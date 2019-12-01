@@ -31,6 +31,15 @@
     background: none;
 }
 
+#Name {
+    display: none;
+    position: absolute;
+    top: 71.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+}
+
 #Score {
     float: left;
     margin: 0 0 30px;
@@ -47,16 +56,7 @@
     background: none;
 }
 
-#Name {
-    display: none;
-    position: absolute;
-    top: 71.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: none;
-}
-
-audio {
+#Audio {
     border: 3px rgba(255, 255, 255) solid;
     border-radius: 30px;
     position: absolute;
@@ -66,10 +66,22 @@ audio {
     background: none;
 }
 
+#VarSelect {
+    left: 25%;
+}
+
+#Davor {
+    display: none;
+    font-size: 20px;
+    position: absolute;
+    top: 26.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 #Rückmeldung {
     display: none;
     background: rgb(236, 239, 241);
-    padding: 20px;
     height: 600px;
     width: 500px;
     position: absolute;
@@ -101,13 +113,12 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     background-image: linear-gradient(290deg, #55df98, #455b97);
-    border: none;
     border: 2px black solid;
     border-radius: 5px;
     width: 90%;
 }
 
-svg {
+#Right {
     display: none;
     background: none;
     position: absolute;
@@ -123,8 +134,11 @@ select {
     position: absolute;
     margin-bottom: 5%;
     top: -5.5%;
-    left: 85%;
     transform: translate(-50%, -50%);
+}
+
+#selecter {
+    left: 85%;
 }
 
 #Übung {
@@ -157,21 +171,6 @@ figure img {
 
 #Zurück {
     background: none;
-}
-
-#VarSelect {
-    position: absolute;
-    top: -5.5%;
-    left: 25%;
-}
-
-#Davor {
-    display: none;
-    font-size: 20px;
-    position: absolute;
-    top: 26.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 @media only screen and (max-width: 600px) {
