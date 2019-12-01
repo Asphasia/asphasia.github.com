@@ -122,8 +122,12 @@ select {
     position: absolute;
     margin-bottom: 5%;
     top: -10%;
-    left: 50%;
+    left: 75%;
     transform: translate(-50%, -50%);
+}
+
+#Übung {
+    text-align: center;
 }
 
 figure {
@@ -148,6 +152,16 @@ figure#einzel {
 
 figure img {
     width: 100%;
+}
+
+#Zurück {
+    background: none;
+}
+
+#VarSelect {
+    position: absolute;
+    top: -10%;
+    left: 25%;
 }
 
 @media only screen and (max-width: 600px) {

@@ -7,15 +7,16 @@ var Audio = document.getElementById("Audio");
 var TippsVar = document.getElementById("Tipps");
 var lösung;
 var selector = document.getElementById("selecter");
+var selectorVar = document.getElementById("VarSelect")
 var img123 = 0;
 var score = 0;
 var highscore = 0;
 var zahl = 0;
+var Kategorie = "Essen"
 
 window.onload = function onload() {
     //document.getElementById("selecter").val = "option1"
     ZeigeRandomBild();
-    Bild.onclick = ÜbungZeigen;
 
 }
 
@@ -23,36 +24,52 @@ function Hide() {
     document.getElementById("Rückmeldung").style.display = "none";
 }
 
+function HideÜbung() {
+
+}
+
 function Tipps() {
     if (selector.options[selector.selectedIndex].value == "Übung") {
+        //Wenn man übung drückt
+        function ÜbungZeigen() {
+            for (var i = 0; i < 70; i++) {
+
+                Main.style.display = ("none")
+                document.getElementById("Übung").style.display = "inline-block"
+                document.body.style.background = "white"
+                var figure1 = document.createElement("figure")
+                figure1.setAttribute("Id", "einzel" + zahl)
+                figure1.setAttribute("Class", "einzel")
+                document.getElementById("Übung").appendChild(figure1)
+                var figcaption1 = document.createElement("figcaption")
+                document.getElementById("einzel" + zahl).appendChild(figcaption1)
+                document.getElementById("einzel" + zahl).textContent = Items[i];
+                var img1 = document.createElement("img")
+                img1.setAttribute("src", "../Bilder/Essen/" + Items[i] + ".jpg")
+                document.getElementById("einzel" + zahl).appendChild(img1)
+                zahl++;
+
+            }
+
+            var a1 = document.createElement("a")
+            a1.setAttribute("Id", "Zurück")
+            document.getElementById("Übung").appendChild(a1)
+            a1.setAttribute("href", "../Seiten/quiz_essen.html")
+            a1.style.display = "block"
+            a1.innerHTML = "Zurück"
+
+        }
+
+        ÜbungZeigen()
+    } else {
         //Wenn man Abfrage drückt
         Name.style.display = "none"
         Bild.onclick = AbfrageBild;
-    } else {
-        //Wenn man übung drückt
-        Name.style.display = "block"
-        Bild.onclick = ZeigeRandomBild;
-    }
-}
 
-function ÜbungZeigen() {
-    for (var i = 0; i < 70; i++) {
-
-        Main.style.display = ("none")
-        var figure1 = document.createElement("figure")
-        figure1.setAttribute("Id", "einzel" + zahl)
-        figure1.setAttribute("Class", "einzel")
-        document.getElementById("gesamt").appendChild(figure1)
-        var figcaption1 = document.createElement("figcaption")
-        document.getElementById("einzel" + zahl).appendChild(figcaption1)
-        document.getElementById("einzel" + zahl).textContent = Items[i];
-        var img1 = document.createElement("img")
-        img1.setAttribute("src", "../Bilder/Essen/" + Items[i] + ".jpg")
-        document.getElementById("einzel" + zahl).appendChild(img1)
-        zahl++;
 
     }
 }
+
 
 
 /*else {
@@ -106,7 +123,8 @@ function AbfrageBild() {
     }
 }
 
-var Items = [
+
+var Items_Essen = [
     "Geflügel",
     "Schweinefleisch",
     "Lammfleisch",
@@ -179,11 +197,47 @@ var Items = [
     "Mango"
 ]
 
+var Items_Trinken = [
+    "Sprudelwasser",
+    "Stilles Wasser",
+    "Kaffee",
+    "Tee",
+    "Cola",
+    "Limonade",
+    "Apfelsaft",
+    "Orangensaft",
+    "Cappuccino",
+    "Milch",
+    "Saft",
+    "Sirup",
+    "Kakao",
+    "Sekt",
+    "Rotwein",
+    "Weißwein",
+    "Bier",
+    "Schnaps"
+]
+
 var RandomItem = {};
+
+var Items = Items_Essen;
+
+function ChangeVar() {
+
+    if (selectorVar.options[selectorVar.selectedIndex].value == "Essen") {
+        Kategorie = "Essen"
+        Items = Items_Essen;
+        ZeigeRandomBild()
+    } else if (selectorVar.options[selectorVar.selectedIndex].value == "Trinken") {
+        Kategorie = "Trinken"
+        Items = Items_Trinken;
+        ZeigeRandomBild()
+    }
+}
 
 function ZeigeRandomBild() {
     var random = window.Items[Math.floor(Math.random() * window.Items.length)];
-    var RandomItem_ = [random, "../Audio/Essen/" + random + ".mp3", "../Bilder/Essen/" + random + ".jpg"];
+    var RandomItem_ = [random, "../Audio/" + Kategorie + "/" + random + ".mp3", "../Bilder/" + Kategorie + "/" + random + ".jpg"];
     RandomItem = RandomItem_;
     Name.innerHTML = RandomItem[0];
     Audio.src = RandomItem[1];
