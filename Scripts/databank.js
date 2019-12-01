@@ -5,7 +5,6 @@ var Score = document.getElementById("Score");
 var Highscore = document.getElementById("Highscore");
 var Audio = document.getElementById("Audio");
 var TippsVar = document.getElementById("Tipps");
-var lösung;
 var selector = document.getElementById("selecter");
 var selectorVar = document.getElementById("VarSelect")
 var img123 = 0;
@@ -24,16 +23,12 @@ function Hide() {
     document.getElementById("Rückmeldung").style.display = "none";
 }
 
-function HideÜbung() {
-
-}
-
 function Tipps() {
     if (selector.options[selector.selectedIndex].value == "Übung") {
         //Wenn man übung drückt
         function ÜbungZeigen() {
             for (var i = 0; i < Items.length; i++) {
-
+                document.getElementById("Davor").style.display = "none"
                 Main.style.display = ("none")
                 document.getElementById("Übung").style.display = "inline-block"
                 document.body.style.background = "white"
@@ -65,18 +60,8 @@ function Tipps() {
         //Wenn man Abfrage drückt
         Name.style.display = "none"
         Bild.onclick = AbfrageBild;
-
-
     }
 }
-
-
-
-/*else {
-    Bild.onclick = ZeigeRandomBild;
-}
-
-}*/
 
 function AbfrageBild() {
     var Antwort = prompt("Geben sie ihre Schäztung ein!")
@@ -218,6 +203,58 @@ var Items_Trinken = [
     "Schnaps"
 ]
 
+var Items_Bad = [
+    "Handtuch",
+    "Waschlappen",
+    "Geschichtscreme",
+    "Shampoo",
+    "Parfüm",
+    "Deo",
+    "Kamm",
+    "Bürste",
+    "Nagelknipser",
+    "Schminke",
+    "Rasierer",
+    "Pinzette",
+    "Brille",
+    "Zahnbürste",
+    "Zahnseide",
+    "Zahnpasta",
+    "Ohrenstäbchen",
+    "Duschgel"
+]
+
+var Items_Ich_fühle_mich = [
+    "gut",
+    "schlecht",
+    "traurig",
+    "müde und schlapp"
+]
+
+var Items_Ich_habe = [
+    "Kopfschmerzen",
+    "Bauchschmerzen",
+    "Zahnschmerzen",
+    "Rückenschmerzen",
+    "Ohrenschmerzen",
+    "Brustschmerzen",
+    "Halsschmerzen",
+    "Augenschmerzen",
+    "Unterleibsschmerzen"
+]
+
+var Items_Ich_möchte = [
+    "Duschen",
+    "zum Klo",
+    "etwas anderes anziehen",
+    "schlafen",
+    "Fernseh schauen",
+    "Radio hören",
+    "aufstehen",
+    "JA",
+    "NEIN"
+]
+
 var RandomItem = {};
 
 var Items = Items_Essen;
@@ -225,15 +262,41 @@ var Items = Items_Essen;
 function ChangeVar() {
 
     if (selectorVar.options[selectorVar.selectedIndex].value == "Essen") {
+        document.getElementById("Davor").style.display = "none"
         Kategorie = "Essen"
         Items = Items_Essen;
         ZeigeRandomBild()
     } else if (selectorVar.options[selectorVar.selectedIndex].value == "Trinken") {
+        document.getElementById("Davor").style.display = "none"
         Kategorie = "Trinken"
         Items = Items_Trinken;
         ZeigeRandomBild()
+    } else if (selectorVar.options[selectorVar.selectedIndex].value == "Bad") {
+        document.getElementById("Davor").style.display = "none"
+        Kategorie = "Bad"
+        Items = Items_Bad;
+        ZeigeRandomBild()
+    } else if (selectorVar.options[selectorVar.selectedIndex].value == "Ich fühle mich") {
+        Kategorie = "Ich fühle mich"
+        document.getElementById("Davor").innerHTML = Kategorie + "..."
+        document.getElementById("Davor").style.display = "block"
+        Items = Items_Ich_fühle_mich;
+        ZeigeRandomBild()
+    } else if (selectorVar.options[selectorVar.selectedIndex].value == "Ich habe") {
+        Kategorie = "Ich habe"
+        document.getElementById("Davor").innerHTML = Kategorie + "..."
+        document.getElementById("Davor").style.display = "block"
+        Items = Items_Ich_habe;
+        ZeigeRandomBild()
+    } else if (selectorVar.options[selectorVar.selectedIndex].value == "Ich möchte") {
+        Kategorie = "Ich möchte"
+        document.getElementById("Davor").innerHTML = Kategorie + "..."
+        document.getElementById("Davor").style.display = "block"
+        Items = Items_Ich_möchte;
+        ZeigeRandomBild()
     }
 }
+
 
 function ZeigeRandomBild() {
     var random = window.Items[Math.floor(Math.random() * window.Items.length)];

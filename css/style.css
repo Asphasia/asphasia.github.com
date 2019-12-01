@@ -117,12 +117,13 @@ svg {
 }
 
 select {
+    font-size: 30px;
     display: block;
     background: rgb(236, 239, 241);
     position: absolute;
     margin-bottom: 5%;
     top: -5.5%;
-    left: 75%;
+    left: 85%;
     transform: translate(-50%, -50%);
 }
 
@@ -162,6 +163,15 @@ figure img {
     position: absolute;
     top: -5.5%;
     left: 25%;
+}
+
+#Davor {
+    display: none;
+    font-size: 20px;
+    position: absolute;
+    top: 26.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @media only screen and (max-width: 600px) {
