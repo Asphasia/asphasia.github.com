@@ -7,13 +7,16 @@ var Audio = document.getElementById("Audio");
 var TippsVar = document.getElementById("Tipps");
 var lösung;
 var selector = document.getElementById("selecter");
-
+var img123 = 0;
 var score = 0;
 var highscore = 0;
+var zahl = 0;
 
 window.onload = function onload() {
     //document.getElementById("selecter").val = "option1"
     ZeigeRandomBild();
+    Bild.onclick = ÜbungZeigen;
+
 }
 
 function Hide() {
@@ -29,6 +32,25 @@ function Tipps() {
         //Wenn man übung drückt
         Name.style.display = "block"
         Bild.onclick = ZeigeRandomBild;
+    }
+}
+
+function ÜbungZeigen() {
+    for (var i = 0; i < 70; i++) {
+
+        Main.style.display = ("none")
+        var figure1 = document.createElement("figure")
+        figure1.setAttribute("Id", "einzel" + zahl)
+        figure1.setAttribute("Class", "einzel")
+        document.getElementById("gesamt").appendChild(figure1)
+        var figcaption1 = document.createElement("figcaption")
+        document.getElementById("einzel" + zahl).appendChild(figcaption1)
+        document.getElementById("einzel" + zahl).textContent = Items[i];
+        var img1 = document.createElement("img")
+        img1.setAttribute("src", "../Bilder/Essen/" + Items[i] + ".jpg")
+        document.getElementById("einzel" + zahl).appendChild(img1)
+        zahl++;
+
     }
 }
 

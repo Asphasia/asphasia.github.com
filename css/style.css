@@ -126,6 +126,30 @@ select {
     transform: translate(-50%, -50%);
 }
 
+figure {
+    margin: 1px;
+    align-items: center;
+    background: none;
+}
+
+figure.einzel {
+    display: inline-block;
+    padding: 10px;
+    width: 31%;
+    border: 1px solid gainsboro;
+}
+
+figure#einzel {
+    display: inline-block;
+    padding: 10px;
+    width: 31%;
+    border: 1px solid gainsboro;
+}
+
+figure img {
+    width: 100%;
+}
+
 @media only screen and (max-width: 600px) {
     #Main {
         height: 100%;
