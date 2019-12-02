@@ -41,7 +41,12 @@ function Tipps() {
                 document.getElementById("einzel" + zahl).textContent = Items[i];
                 var img1 = document.createElement("img")
                 img1.setAttribute("src", "../Bilder/" + Kategorie + "/" + Items[i] + ".jpg")
+                img1.setAttribute("onClick", "document.getElementById('" + Items[i] + "Audio').play();")
                 document.getElementById("einzel" + zahl).appendChild(img1)
+                var audio1 = document.createElement("AUDIO")
+                audio1.setAttribute("src", "../Audio/" + Kategorie + "/" + Items[i] + ".mp3")
+                audio1.setAttribute("id", Items[i] + "Audio")
+                document.getElementById("einzel" + zahl).appendChild(audio1)
                 zahl++;
 
             }
@@ -62,6 +67,9 @@ function Tipps() {
         Bild.onclick = AbfrageBild;
     }
 }
+
+
+
 
 function AbfrageBild() {
     var Antwort = prompt("Geben sie ihre Schäztung ein!")
