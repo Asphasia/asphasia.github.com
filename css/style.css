@@ -182,21 +182,25 @@ figure img {
     #Bild {
         height: 300px;
         width: 300px;
-        top: 45%;
+        top: 55%;
+    }
+    #Right {
+        position: absolute;
+        top: 55%;
     }
     #Score {
         position: absolute;
         top: 9%;
-        left: 10%;
-        font-size: 15px;
-        margin: 10px;
+        left: 5%;
+        font-size: 30px;
+        margin: 5px;
     }
     #Highscore {
         position: absolute;
         top: 9%;
-        font-size: 15px;
-        margin: 10px;
-        right: 10%;
+        font-size: 30px;
+        margin: 5px;
+        right: 5%;
     }
     #Rückmeldung {
         height: 100%;
@@ -221,5 +225,10 @@ figure img {
     }
     figure.einzel {
         width: 41%;
+    }
+    #Davor {
+        position: absolute;
+        font-size: 25px;
+        top: 17.5%;
     }
 }
