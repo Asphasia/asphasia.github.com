@@ -205,4 +205,16 @@ figure img {
     select {
         top: 5%;
     }
+    #selecter {
+        left: 82%;
+    }
+    #VarSelect {
+        left: 32%;
+    }
+    figure {
+        font-size: 20px;
+    }
+    figure.einzel {
+        width: 41%;
+    }
 }
