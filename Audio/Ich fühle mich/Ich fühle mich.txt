@@ -1,0 +1,4 @@
+"gut",
+"schlecht",
+"traurig",
+"müde und schlapp",

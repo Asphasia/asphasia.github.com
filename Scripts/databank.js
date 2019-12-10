@@ -91,6 +91,7 @@ function AbfrageBild() {
 
     } else {
         //Bild.style.border = "10px red solid";
+
         document.getElementById("Rückmeldung").style.display = "block";
         document.getElementById("ErgebnisHeader").innerHTML = "<u>Dein Ergebnis ist falsch!</u>";
         document.getElementById("ErgebnisParagraph").innerHTML = "Schade, dein Ergebnis ist falsch. Das richtige Ergebnis wäre:" + " " + RandomItem[0];
