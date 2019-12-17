@@ -47,6 +47,7 @@ function Tipps() {
                 audio1.setAttribute("src", "../Audio/" + Kategorie + "/" + Items[i] + ".mp3")
                 audio1.setAttribute("id", Items[i] + "Audio")
                 document.getElementById("einzel" + zahl).appendChild(audio1)
+                document.getElementById("einzel" + zahl).load();
                 zahl++;
 
             }
@@ -313,5 +314,6 @@ function ZeigeRandomBild() {
     RandomItem = RandomItem_;
     Name.innerHTML = RandomItem[0];
     Audio.src = RandomItem[1];
+    Audio.load();
     Bild.src = RandomItem[2];
 }
